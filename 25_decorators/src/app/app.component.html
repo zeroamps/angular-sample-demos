@@ -1,0 +1,11 @@
+<h1 class="text-center text-9xl font-light" appHighlight="red">Decorators!</h1>
+<h1 *appIfNot="false" class="text-center text-9xl font-light" appHighlight>Decorators!</h1>
+
+<ng-container *ngIf="false; then welcome; else seeyou"></ng-container>
+<ng-template #welcome><div class="text-center text-9xl font-light">Welcome!</div></ng-template>
+<ng-template #seeyou><div class="text-center text-9xl font-light">See you!</div></ng-template>
+
+<div class="text-center text-9xl font-light">{{ 'John' | hello }}</div>
+
+<app-counter [(counter)]="counter"></app-counter>
+<div class="text-center text-9xl font-light">App: {{ counter }}</div>

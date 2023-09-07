@@ -1,0 +1,12 @@
+<div class="border p-4">
+  <h2 class="text-xl">{{ this.constructor.name }}</h2>
+  <button class="m-4 rounded bg-green-700 px-8 py-2 text-3xl text-white" (click)="handleClick()">
+    Click on me {{ counter.value }}!
+  </button>
+  <div class="flex gap-x-4">
+    <!-- <app-child-a></app-child-a> -->
+    <!-- <app-child-b></app-child-b> -->
+    <app-child-a [counter]="counter"></app-child-a>
+    <app-child-b [counter]="counter"></app-child-b>
+  </div>
+</div>

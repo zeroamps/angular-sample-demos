@@ -1,0 +1,9 @@
+<div class="container d-flex h-100 justify-content-center align-items-center">
+  <div class="text-center">
+    <h1 class="display-1 text-uppercase"><i class="bi bi-boxes"></i> Custom controls</h1>
+    <form [formGroup]="form" class="position-relative">
+      <app-exercise-dropdown-control [exercises]="exercises" formControlName="exercise"></app-exercise-dropdown-control>
+    </form>
+    <p>{{ form.value.exercise }}</p>
+  </div>
+</div>

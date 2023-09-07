@@ -1,0 +1,6 @@
+<div *ngIf="errorHandler.error$ | async as error" class="absolute w-full border-b border-red-600 bg-red-100 p-6">
+  {{ error }}
+  <button class="absolute top-4 right-4" (click)="errorHandler.error$.next(null)">
+    <span class="material-symbols-outlined align-text-bottom text-3xl">close</span>
+  </button>
+</div>

@@ -1,0 +1,8 @@
+{
+  "HELLO": {
+    "WORLD": "Hello, world!",
+    "NAME": "Hello, {{name}}!"
+  },
+  "JOIN": "Join {{value}}!",
+  "US": "us"
+}

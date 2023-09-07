@@ -1,0 +1,17 @@
+<h1 class="text-center text-9xl font-light">Sign in</h1>
+<h2 class="m-8 text-center text-2xl font-light">Allow users to sign in with a mobile phone number.</h2>
+<div class="my-12 flex justify-center gap-x-6">
+  <form *ngIf="!confirmationResult" [formGroup]="formPhone" class="flex flex-col gap-y-6" (ngSubmit)="signIn()">
+    <div class="flex gap-x-4">
+      <input id="phone" name="phone" type="phone" class="ctrl" placeholder="Phone" formControlName="phone" />
+      <button type="submit" class="btn">Sign in</button>
+    </div>
+  </form>
+  <form *ngIf="confirmationResult" [formGroup]="formCode" class="flex flex-col gap-y-6" (ngSubmit)="verify()">
+    <div class="flex gap-x-4">
+      <input id="code" name="code" type="code" class="ctrl" placeholder="Code" formControlName="code" />
+      <button type="submit" class="btn">Sign in</button>
+    </div>
+  </form>
+</div>
+<div id="recaptcha"></div>

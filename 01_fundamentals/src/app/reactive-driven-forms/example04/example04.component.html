@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-6">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="alert alert-info">A very simple reactive form group created to show the FormArray.</div>
+      <div class="mb-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input id="firstName" name="firstName" type="text" class="form-control" formControlName="firstName" />
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input id="lastName" name="lastName" type="text" class="form-control" formControlName="lastName" />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" name="email" type="email" class="form-control" formControlName="email" />
+      </div>
+      <div formArrayName="hobbies" class="mb-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 class="fs-5">Hobbies</h2>
+          <button type="button" class="btn btn-sm text-success" (click)="insert()">
+            <i class="bi bi-plus-circle-fill"></i>
+          </button>
+        </div>
+        <div *ngFor="let hobby of hobbies.controls; let i = index" class="mt-1">
+          <div class="hstack gap-1">
+            <input id="hobby-{{ i }}" name="hobby-{{ i }}" type="text" class="form-control" [formControlName]="i" />
+            <button type="button" class="btn btn-sm text-danger" (click)="delete(i)">
+              <i class="bi bi-x-circle-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="d-grid gap-1 d-md-flex justify-content-md-center mb-1">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-6">
+    <app-form-info [control]="form"></app-form-info>
+  </div>
+</div>

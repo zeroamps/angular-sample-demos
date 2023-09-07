@@ -1,0 +1,15 @@
+<div class="text-center">
+  <h1 class="p-8 text-9xl font-light">Change Detection!</h1>
+  <div class="border p-4">
+    <h2 class="text-xl">{{ this.constructor.name }}</h2>
+    <button class="m-4 rounded bg-green-700 px-8 py-2 text-3xl text-white" (click)="handleClick()">
+      Click on me {{ counter.value }}!
+    </button>
+    <div class="flex gap-x-4">
+      <!-- <app-page-a class="w-full"></app-page-a> -->
+      <!-- <app-page-b class="w-full"></app-page-b> -->
+      <app-page-a [counter]="counter" class="w-full"></app-page-a>
+      <app-page-b [counter]="counter" class="w-full"></app-page-b>
+    </div>
+  </div>
+</div>

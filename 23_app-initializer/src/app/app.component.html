@@ -1,0 +1,21 @@
+<div class="text-center">
+  <h1 class="m-8 text-7xl font-light">APP_INITIALIZER</h1>
+  <div class="m-4 rounded-lg border bg-green-900 p-4 text-3xl text-white" *ngIf="posts$ | async as posts">
+    Posts: {{ posts.length }}
+  </div>
+  <div class="m-4 rounded-lg border bg-green-900 p-4 text-3xl text-white" *ngIf="comments$ | async as comments">
+    Comments: {{ comments.length }}
+  </div>
+  <div class="m-4 rounded-lg border bg-green-900 p-4 text-3xl text-white" *ngIf="albums$ | async as albums">
+    Albums: {{ albums.length }}
+  </div>
+  <div class="m-4 rounded-lg border bg-green-900 p-4 text-3xl text-white" *ngIf="photos$ | async as photos">
+    Photos: {{ photos.length }}
+  </div>
+  <div class="m-4 rounded-lg border bg-green-900 p-4 text-3xl text-white" *ngIf="todos$ | async as todos">
+    Todos: {{ todos.length }}
+  </div>
+  <div class="m-4 rounded-lg border bg-green-900 p-4 text-3xl text-white" *ngIf="users$ | async as users">
+    Users: {{ users.length }}
+  </div>
+</div>

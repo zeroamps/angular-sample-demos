@@ -1,0 +1,8 @@
+{
+  "HELLO": {
+    "WORLD": "Ahoj, svet!",
+    "NAME": "Ahoj, {{name}}!"
+  },
+  "JOIN": "Pridaj sa {{value}}!",
+  "US": "k nám"
+}

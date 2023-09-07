@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply h-full;
+  }
+}
+
+@layer components {
+  button.btn {
+    @apply rounded-lg bg-sky-700 px-16 py-3 text-3xl text-white;
+  }
+
+  input.ctrl {
+    @apply rounded-lg border p-4 text-xl;
+  }
+
+  input.ng-touched.ng-invalid {
+    @apply border-red-600;
+  }
+
+  input.ng-touched.ng-valid {
+    @apply border-green-600;
+  }
+}

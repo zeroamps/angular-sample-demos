@@ -1,0 +1,21 @@
+<header class="fixed w-full">
+  <nav class="bg-indigo-900">
+    <ul class="flex text-xl font-light uppercase text-white">
+      <li class="p-4">
+        <a routerLink="" routerLinkActive="font-normal" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      </li>
+      <li class="p-4">
+        <a routerLink="dashboard-one" routerLinkActive="font-normal">Imperative</a>
+      </li>
+      <li class="p-4">
+        <a routerLink="dashboard-two" routerLinkActive="font-normal">Declarative</a>
+      </li>
+      <li class="p-4">
+        <a routerLink="dashboard-three" routerLinkActive="font-normal">Push-Based</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main class="h-full pt-[60px]">
+  <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,20 @@
+<h1 class="display-1">debounce</h1>
+<input id="query" name="query" type="query" class="form-control" [formControl]="query" (input)="search()" />
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th class="text-uppercase">Id</th>
+      <th class="text-uppercase">Title</th>
+      <th class="text-uppercase">Completed</th>
+      <th class="text-uppercase">User Id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let todo of filteredTodos">
+      <th>{{ todo.id }}</th>
+      <td>{{ todo.title }}</td>
+      <td>{{ todo.completed }}</td>
+      <td>{{ todo.userId }}</td>
+    </tr>
+  </tbody>
+</table>

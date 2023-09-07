@@ -1,0 +1,16 @@
+<h1 class="text-center text-9xl font-light">Sign up</h1>
+<div class="my-12 flex justify-center gap-x-6">
+  <form [formGroup]="form" class="flex flex-col gap-y-6" (ngSubmit)="signUp()">
+    <div class="flex gap-x-4">
+      <input id="email" name="email" type="email" class="ctrl" placeholder="Email" formControlName="email" />
+      <input
+        id="password"
+        name="password"
+        type="password"
+        class="ctrl"
+        placeholder="Password"
+        formControlName="password" />
+    </div>
+    <button type="submit" class="btn">Sign up</button>
+  </form>
+</div>

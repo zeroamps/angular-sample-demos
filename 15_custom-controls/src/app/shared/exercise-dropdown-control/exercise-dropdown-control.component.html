@@ -1,0 +1,24 @@
+<div ngbDropdown>
+  <button type="button" class="btn btn-outline-primary btn-sm" ngbDropdownToggle>{{ selected.name }}</button>
+  <div ngbDropdownMenu class="shadow">
+    <h2 class="text-center fs-6">Select type of wellbeing exercise</h2>
+    <div [ngbNavOutlet]="nav" class="p-3 py-1"></div>
+    <nav ngbNav #nav="ngbNav" class="nav-tabs small">
+      <ng-container ngbNavItem *ngFor="let category of categories">
+        <a ngbNavLink class="px-1 py-0 mx-1">{{ category.name }}</a>
+        <ng-template ngbNavContent>
+          <div class="d-flex pt-2 pb-3 justify-content-center">
+            <ng-container *ngFor="let exercise of category.exercises">
+              <button
+                class="btn btn-sm text-white rounded-pill shadow m-1"
+                [ngClass]="exercise.color"
+                (click)="select(exercise)">
+                {{ exercise.name }}
+              </button>
+            </ng-container>
+          </div>
+        </ng-template>
+      </ng-container>
+    </nav>
+  </div>
+</div>
